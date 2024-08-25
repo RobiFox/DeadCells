@@ -31,3 +31,17 @@ a, a:visited {
 .unhighlightable {
   user-select: none;
 }
+
+.bordered {
+  border-width: 30px;
+  border-style: solid;
+  border-image-repeat: stretch;
+  border-image-slice: 12;
+  background-color: #17213cf5;
+  box-shadow: inset 0 0 0 calc(100% - 2px) #f0f0f0;
+  border-image-source: url("/assets/border.png");
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+
+}
