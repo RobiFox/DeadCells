@@ -1,1 +1,2 @@
-ng deploy --repo git@github.com:RobiFox/angular-todo.git --cname deadcells.robi.zip
+ng deploy --repo git@github.com:RobiFox/DeadCells.git --cname deadcells.robi.zip
+PAUSE
