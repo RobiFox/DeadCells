@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {DropdownModule} from "primeng/dropdown";
 import {FormsModule} from "@angular/forms";
-import {CommonModule} from "@angular/common";
+import {CommonModule, NgOptimizedImage} from "@angular/common";
 import {CheckboxModule} from "primeng/checkbox";
 
 @Component({
@@ -12,6 +12,7 @@ import {CheckboxModule} from "primeng/checkbox";
     DropdownModule,
     FormsModule,
     CheckboxModule,
+    NgOptimizedImage,
   ],
   templateUrl: './settings.component.html',
   styleUrls: ['./settings.component.scss']
