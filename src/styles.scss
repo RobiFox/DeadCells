@@ -19,6 +19,15 @@ p {
   text-shadow: 1px 1px 2px blue;
 }
 
+a {
+  text-decoration: none;
+}
+
+a, a:visited {
+  color: lightblue;
+  text-shadow: 2px 2px 2px blue;
+}
+
 .unhighlightable {
   user-select: none;
 }
