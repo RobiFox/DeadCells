@@ -1,5 +1,32 @@
-<div style="display: flex; flex-direction: row; gap: 8px; align-items: center; justify-content: center">
-  <img src="assets/Boss_Stem_Cell_Icon.webp" style="height: 32px; width: auto;">
-  <p>Boss Cells</p>
-  <p-dropdown [options]="bossCells" [(ngModel)]="selectedBossCell" scrollHeight="100"></p-dropdown>
+<div style="display: flex; flex-direction: column; gap: 4px; align-items: start;">
+  <div class="element">
+    <img src="assets/Boss_Stem_Cell_Icon.webp" style="height: 32px; width: auto;">
+    <p>Boss Cells</p>
+    <p-dropdown [options]="bossCells" [(ngModel)]="selectedBossCell" scrollHeight="100" [style]="{'align-self': 'right'}"></p-dropdown>
+  </div>
+  <div class="element">
+    <p-checkbox inputId="curse" id="curse"></p-checkbox>
+    <label for="curse"><p>Maximize Cursed Chests</p></label>
+  </div>
+  <p style="text-align: center; align-self: center; font-size: 32px;">DLCs</p>
+  <div class="element">
+    <p-checkbox inputId="giant" id="giant"></p-checkbox>
+    <label for="giant"><p>Rise of the Giant</p></label>
+  </div>
+  <div class="element">
+    <p-checkbox inputId="bad-seed" id="bad-seed"></p-checkbox>
+    <label for="bad-seed"><p>The Bad Seed</p></label>
+  </div>
+  <div class="element">
+    <p-checkbox inputId="fatal-falls" id="fatal-falls"></p-checkbox>
+    <label for="fatal-falls"><p>Fatal Falls</p></label>
+  </div>
+  <div class="element">
+    <p-checkbox inputId="queen" id="queen"></p-checkbox>
+    <label for="queen"><p>The Queen and the Sea</p></label>
+  </div>
+  <div class="element">
+    <p-checkbox inputId="castlevania" id="castlevania"></p-checkbox>
+    <label for="castlevania"><p>Return to Castlevania</p></label>
+  </div>
 </div>
