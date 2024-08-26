@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {BiomeModel} from "./biome.model";
 
 @Component({
   selector: 'app-biome',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './biome.component.scss'
 })
 export class BiomeComponent {
-
+  biomeModel!: BiomeModel;
 }

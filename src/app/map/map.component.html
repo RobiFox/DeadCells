@@ -1,18 +1,6 @@
-<div style="display: flex; flex-direction: row; gap: 128px; align-items: center;">
-  <div class="element">
-    <app-biome #a1>hi</app-biome>
-  </div>
-  <div class="element">
-    <app-biome #b1>hi</app-biome>
-    <app-biome #b2>hi</app-biome>
-    <app-biome #b3>hi</app-biome>
-  </div>
-  <div class="element">
-    <app-biome #c1>hi</app-biome>
-    <app-biome #c2>hi</app-biome>
-  </div>
-  <div class="element">
-    <app-biome>hi</app-biome>
-    <app-biome>hi</app-biome>
-  </div>
+<div style="position: absolute; display: flex; flex-direction: column;">
+  <p-button pRipple label="Show best route" [style]="{'margin': '4px'}"></p-button>
+</div>
+<div style="display: flex; flex-direction: row; gap: 128px; align-items: center; justify-content: center;" #list>
+<!--elements added at runtime-->
 </div>

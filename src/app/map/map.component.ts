@@ -1,10 +1,21 @@
-import {AfterViewInit, Component, ElementRef, Inject, Renderer2, ViewChild} from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ComponentRef,
+  ElementRef,
+  Inject,
+  Renderer2,
+  ViewChild,
+  ViewContainerRef
+} from '@angular/core';
 import {SettingsComponent} from "../settings/settings.component";
 import {CheckboxModule} from "primeng/checkbox";
 import {DropdownModule} from "primeng/dropdown";
 import {NgOptimizedImage} from "@angular/common";
 import {DataService} from "../data.service";
 import {BiomeComponent} from "../biome/biome.component";
+import {Button} from "primeng/button";
+import {Ripple} from "primeng/ripple";
 
 declare var LeaderLine: any;
 
@@ -16,38 +27,33 @@ declare var LeaderLine: any;
     CheckboxModule,
     DropdownModule,
     NgOptimizedImage,
-    BiomeComponent
+    BiomeComponent,
+    Button,
+    Ripple
   ],
   templateUrl: './map.component.html',
   styleUrl: './map.component.scss'
 })
 export class MapComponent implements AfterViewInit {
-  constructor(private dataService: DataService, private renderer: Renderer2) {
+  constructor(private dataService: DataService, private viewContainerRef: ViewContainerRef, private renderer: Renderer2) {
   }
 
-  @ViewChild('a1', { read: ElementRef }) a1!: ElementRef;
-  @ViewChild('b1', { read: ElementRef }) b1!: ElementRef;
-  @ViewChild('b2', { read: ElementRef }) b2!: ElementRef;
-  @ViewChild('b3', { read: ElementRef }) b3!: ElementRef;
-  @ViewChild('c1', { read: ElementRef }) c1!: ElementRef;
-  @ViewChild('c2', { read: ElementRef }) c2!: ElementRef;
-
   private biomeData: any;
+  @ViewChild("list", {read: ElementRef}) list!: ElementRef;
 
   ngAfterViewInit() {
-    this.createLine(this.a1.nativeElement, this.b1.nativeElement);
-    this.createLine(this.a1.nativeElement, this.b2.nativeElement);
-    this.createLine(this.b1.nativeElement, this.c1.nativeElement);
-    this.createLine(this.b2.nativeElement, this.c2.nativeElement);
-
     this.dataService.getData().subscribe({
       next: (data) => {
         this.biomeData = data;
         console.log(data.length);
         for(let i = 0; i < data.length; i++) {
-          console.log("i: " + i);
+          const divElement = this.renderer.createElement('div');
+          this.renderer.addClass(divElement, "element");
+          this.renderer.appendChild(this.list.nativeElement, divElement);
           for(let j = 0; j < data[i].length; j++) {
-            console.log(data[i][j]);
+            const biomeComponent: ComponentRef<BiomeComponent> = this.viewContainerRef.createComponent(BiomeComponent);
+            biomeComponent.instance.biomeModel = data[i][j];
+            this.renderer.appendChild(divElement, biomeComponent.location.nativeElement);
           }
         }
       },
