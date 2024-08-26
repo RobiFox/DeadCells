@@ -5,28 +5,28 @@
     <p-dropdown [options]="bossCells" [(ngModel)]="selectedBossCell" scrollHeight="100" [style]="{'align-self': 'right'}"></p-dropdown>
   </div>
   <div class="element">
-    <p-checkbox inputId="curse" id="curse"></p-checkbox>
+    <p-checkbox inputId="curse" id="curse" [(ngModel)]="cursedChests" [binary]="true"></p-checkbox>
     <label for="curse"><p>Maximize Cursed Chests</p></label>
   </div>
   <p style="text-align: center; align-self: center; font-size: 32px;">DLCs</p>
   <div class="element">
-    <p-checkbox inputId="giant" id="giant"></p-checkbox>
+    <p-checkbox inputId="giant" id="giant" [(ngModel)]="riseOfTheGiants" [binary]="true"></p-checkbox>
     <label for="giant"><p>Rise of the Giant</p></label>
   </div>
   <div class="element">
-    <p-checkbox inputId="bad-seed" id="bad-seed"></p-checkbox>
+    <p-checkbox inputId="bad-seed" id="bad-seed" [(ngModel)]="theBadSeed" [binary]="true"></p-checkbox>
     <label for="bad-seed"><p>The Bad Seed</p></label>
   </div>
   <div class="element">
-    <p-checkbox inputId="fatal-falls" id="fatal-falls"></p-checkbox>
+    <p-checkbox inputId="fatal-falls" id="fatal-falls" [(ngModel)]="fatalFalls" [binary]="true"></p-checkbox>
     <label for="fatal-falls"><p>Fatal Falls</p></label>
   </div>
   <div class="element">
-    <p-checkbox inputId="queen" id="queen"></p-checkbox>
+    <p-checkbox inputId="queen" id="queen" [(ngModel)]="queenAndTheSea" [binary]="true"></p-checkbox>
     <label for="queen"><p>The Queen and the Sea</p></label>
   </div>
   <div class="element">
-    <p-checkbox inputId="castlevania" id="castlevania"></p-checkbox>
+    <p-checkbox inputId="castlevania" id="castlevania" [(ngModel)]="castlevania" [binary]="true"></p-checkbox>
     <label for="castlevania"><p>Return to Castlevania</p></label>
   </div>
 </div>

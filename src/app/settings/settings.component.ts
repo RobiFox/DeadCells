@@ -20,4 +20,11 @@ import {CheckboxModule} from "primeng/checkbox";
 export class SettingsComponent {
   bossCells = [0, 1, 2, 3, 4, 5];
   selectedBossCell = 0;
+
+  cursedChests = true;
+  riseOfTheGiants = true;
+  theBadSeed = false;
+  fatalFalls = false;
+  queenAndTheSea = false;
+  castlevania = false;
 }

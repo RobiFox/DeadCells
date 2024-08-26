@@ -65,6 +65,6 @@ export class MapComponent implements AfterViewInit {
     if (typeof LeaderLine === 'undefined') return;
     const line = new LeaderLine(a, b);
     line.path = "grid";
-    line.color = "green";
+    line.color = "#2B88B3";
   }
 }
