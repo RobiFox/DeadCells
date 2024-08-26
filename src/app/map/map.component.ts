@@ -37,7 +37,7 @@ declare var LeaderLine: any;
   styleUrl: './map.component.scss'
 })
 export class MapComponent {
-  constructor(private dataService: DataService, private viewContainerRef: ViewContainerRef, private renderer: Renderer2, private cdr: ChangeDetectorRef) {
+  constructor(private dataService: DataService) {
   }
 
   protected biomeData = [];
