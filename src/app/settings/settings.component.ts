@@ -25,7 +25,7 @@ export class SettingsComponent {
 
   dlcs = {
     "spoiler": false,
-    "riseOfTheGiants": false,
+    "riseOfTheGiants": true,
     "theBadSeed": false,
     "fatalFalls": false,
     "queenAndTheSea": false,
