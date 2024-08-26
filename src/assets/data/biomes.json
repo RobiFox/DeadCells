@@ -1,165 +1,162 @@
 [
-  {
-    "1": [
-      {
-        "id": "prisoners",
-        "name": "Prisoners' Quarters",
-        "difficulty": [
-          {
-            "scrollCount": 2,
-            "dualScrolls": 0,
-            "cursedChestChance": 0.01,
-            "fragment":0
-          }
-        ]
-      }
-    ],
-
-    "2": [
-      {
-        "id": "condemned",
-        "name": "Promnade of the Condemned",
-        "difficulty": [
-          {
-            "scrollCount": 1,
-            "dualScrolls": 2,
-            "cursedChestChance": 0.1,
-            "fragment": 0
-          },
-          {
-            "scrollCount": 2,
-            "dualScrolls": 2,
-            "cursedChestChance": 0.1,
-            "fragment": 0
-          },
-          {
-            "scrollCount": 2,
-            "dualScrolls": 2,
-            "cursedChestChance": 0.1,
-            "fragment": 0
-          },
-          {
-            "scrollCount": 2,
-            "dualScrolls": 2,
-            "cursedChestChance": 0.1,
-            "fragment": 1
-          },
-          {
-            "scrollCount": 2,
-            "dualScrolls": 2,
-            "cursedChestChance": 0.1,
-            "fragment": 2
-          }
-        ]
-      },
-      {
-        "id": "toxic",
-        "name": "Toxic Sewers",
-        "difficulty": [
-          {
-            "scrollCount": 1,
-            "dualScrolls": 2,
-            "cursedChestChance": 0.1,
-            "fragment": 0
-          },
-          {
-            "scrollCount": 2,
-            "dualScrolls": 2,
-            "cursedChestChance": 0.1,
-            "fragment": 0
-          },
-          {
-            "scrollCount": 2,
-            "dualScrolls": 2,
-            "cursedChestChance": 0.1,
-            "fragment": 0
-          },
-          {
-            "scrollCount": 2,
-            "dualScrolls": 2,
-            "cursedChestChance": 0.1,
-            "fragment": 2
-          },
-          {
-            "scrollCount": 2,
-            "dualScrolls": 2,
-            "cursedChestChance": 0.1,
-            "fragment": 3
-          }
-        ]
-      },
-      {
-        "id": "dilapidated",
-        "name": "Dilapidated Arboretum",
-        "difficulty": [
-          {
-            "scrollCount": 1,
-            "dualScrolls": 2,
-            "cursedChestChance": 0.1,
-            "fragment": 0
-          },
-          {
-            "scrollCount": 2,
-            "dualScrolls": 2,
-            "cursedChestChance": 0.1,
-            "fragment": 0
-          },
-          {
-            "scrollCount": 2,
-            "dualScrolls": 2,
-            "cursedChestChance": 0.1,
-            "fragment": 0
-          },
-          {
-            "scrollCount": 2,
-            "dualScrolls": 2,
-            "cursedChestChance": 0.1,
-            "fragment": 1
-          },
-          {
-            "scrollCount": 2,
-            "dualScrolls": 2,
-            "cursedChestChance": 0.1,
-            "fragment": 2
-          }
-        ]
-      },
-      {
-        "id": "castle_outskirts",
-        "name": "Castle's Outskirts",
-        "difficulty": [
-          {
-            "scrollCount": 1,
-            "dualScrolls": 2,
-            "cursedChestChance": 0.1,
-            "fragment": 0
-          },
-          {
-            "scrollCount": 2,
-            "dualScrolls": 2,
-            "cursedChestChance": 0.1,
-            "fragment": 0
-          },
-          {
-            "scrollCount": 2,
-            "dualScrolls": 2,
-            "cursedChestChance": 0.1,
-            "fragment": 0
-          },
-          {
-            "scrollCount": 2,
-            "dualScrolls": 2,
-            "cursedChestChance": 0.1,
-            "fragment": 1
-          },
-          {
-            "scrollCount": 2,
-            "dualScrolls": 2,
-            "cursedChestChance": 0.1,
-            "fragment": 3
-          }
-        ]
-      }
-    ]
-  }
+  [
+    {
+      "id": "prisoners",
+      "name": "Prisoners' Quarters",
+      "difficulty": [
+        {
+          "scrollCount": 2,
+          "dualScrolls": 0,
+          "cursedChestChance": 0.01,
+          "fragment": 0
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "id": "condemned",
+      "name": "Promnade of the Condemned",
+      "difficulty": [
+        {
+          "scrollCount": 1,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 0
+        },
+        {
+          "scrollCount": 2,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 0
+        },
+        {
+          "scrollCount": 2,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 0
+        },
+        {
+          "scrollCount": 2,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 1
+        },
+        {
+          "scrollCount": 2,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 2
+        }
+      ]
+    },
+    {
+      "id": "toxic",
+      "name": "Toxic Sewers",
+      "difficulty": [
+        {
+          "scrollCount": 1,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 0
+        },
+        {
+          "scrollCount": 2,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 0
+        },
+        {
+          "scrollCount": 2,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 0
+        },
+        {
+          "scrollCount": 2,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 2
+        },
+        {
+          "scrollCount": 2,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 3
+        }
+      ]
+    },
+    {
+      "id": "dilapidated",
+      "name": "Dilapidated Arboretum",
+      "difficulty": [
+        {
+          "scrollCount": 1,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 0
+        },
+        {
+          "scrollCount": 2,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 0
+        },
+        {
+          "scrollCount": 2,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 0
+        },
+        {
+          "scrollCount": 2,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 1
+        },
+        {
+          "scrollCount": 2,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 2
+        }
+      ]
+    },
+    {
+      "id": "castle_outskirts",
+      "name": "Castle's Outskirts",
+      "difficulty": [
+        {
+          "scrollCount": 1,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 0
+        },
+        {
+          "scrollCount": 2,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 0
+        },
+        {
+          "scrollCount": 2,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 0
+        },
+        {
+          "scrollCount": 2,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 1
+        },
+        {
+          "scrollCount": 2,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 3
+        }
+      ]
+    }
+  ]
 ]
