@@ -16,6 +16,7 @@ import {DataService} from "../data.service";
 import {BiomeComponent} from "../biome/biome.component";
 import {Button} from "primeng/button";
 import {Ripple} from "primeng/ripple";
+import {BiomeModel} from "../biome/biome.model";
 
 declare var LeaderLine: any;
 
@@ -35,31 +36,18 @@ declare var LeaderLine: any;
   templateUrl: './map.component.html',
   styleUrl: './map.component.scss'
 })
-export class MapComponent implements AfterViewInit {
+export class MapComponent {
   constructor(private dataService: DataService, private viewContainerRef: ViewContainerRef, private renderer: Renderer2, private cdr: ChangeDetectorRef) {
   }
 
-  protected biomeData: any;
+  protected biomeData = [];
   @ViewChild("list") list!: ElementRef;
 
-  ngAfterViewInit() {
+  ngOnInit() {
     this.dataService.getData().subscribe({
       next: (data) => {
         this.biomeData = data;
         console.log(data.length);
-        for (let i = 0; i < data.length; i++) {
-          const divElement = this.renderer.createElement('div');
-          this.renderer.addClass(divElement, "element");
-          this.renderer.appendChild(this.list.nativeElement, divElement);
-          for (let j = 0; j < data[i].length; j++) {
-            let biomeComponent: ComponentRef<BiomeComponent> = this.viewContainerRef.createComponent(BiomeComponent);
-            //biomeComponent.instance.biomeModel = data[i][j];
-            biomeComponent.setInput("biomeModel", data[i][j]);
-            this.cdr.detectChanges();
-            this.renderer.appendChild(divElement, biomeComponent.location.nativeElement);
-          }
-          console.log("added");
-        }
       },
       error: (error) => {
         console.error(error);

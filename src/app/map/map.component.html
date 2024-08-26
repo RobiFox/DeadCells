@@ -1,6 +1,9 @@
-<div style="position: absolute; display: flex; flex-direction: column;">
-  <p-button pRipple label="Show best route" [style]="{'margin': '4px'}"></p-button>
-</div>
-<div style="display: flex; flex-direction: row; gap: 128px; align-items: center; justify-content: center;" #list>
-
+<div style="display: flex; flex-direction: row; gap: 128px; align-items: center; justify-content: center;">
+  <!-- Iterate over biomeData array -->
+  <ng-container *ngFor="let biomeList of biomeData">
+    <div class="element">
+      <!-- Iterate over each biome in the biomeList -->
+      <app-biome *ngFor="let biome of biomeList" [biomeModel]="biome"></app-biome>
+    </div>
+  </ng-container>
 </div>
