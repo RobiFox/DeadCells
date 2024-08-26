@@ -1,7 +1,12 @@
-<div style="display: flex; flex-direction: row; gap: 128px; align-items: center; justify-content: center;">
-  <ng-container *ngFor="let biomeList of biomeData">
-    <div class="element">
-      <app-biome *ngFor="let biome of biomeList" [biomeModel]="biome"></app-biome>
-    </div>
-  </ng-container>
+<div style="max-width: 50vw">
+  <div style="position: absolute">
+    <p-button pRipple>Show best route</p-button>
+  </div>
+  <div style="display: flex; flex-direction: row; gap: 128px; align-items: center; justify-content: center;">
+    <ng-container *ngFor="let biomeList of getFilteredBiomeData()">
+      <div class="element">
+        <app-biome *ngFor="let biome of biomeList" [biomeModel]="biome"></app-biome>
+      </div>
+    </ng-container>
+  </div>
 </div>

@@ -3,8 +3,8 @@ import {
   Component,
   ComponentRef,
   ElementRef,
-  Inject, NgZone,
-  Renderer2,
+  Inject, NgZone, Optional,
+  Renderer2, SkipSelf,
   ViewChild,
   ViewContainerRef
 } from '@angular/core';
@@ -17,6 +17,7 @@ import {BiomeComponent} from "../biome/biome.component";
 import {Button} from "primeng/button";
 import {Ripple} from "primeng/ripple";
 import {BiomeModel} from "../biome/biome.model";
+import {CalculatorComponent} from "../calculator/calculator.component";
 
 declare var LeaderLine: any;
 
@@ -37,17 +38,33 @@ declare var LeaderLine: any;
   styleUrl: './map.component.scss'
 })
 export class MapComponent {
-  constructor(private dataService: DataService) {
+  constructor(private dataService: DataService, @Optional() @SkipSelf() private parent: CalculatorComponent, private ngZone: NgZone) {
   }
 
-  protected biomeData = [];
+  private biomeData = [];
   @ViewChild("list") list!: ElementRef;
+
+  getFilteredBiomeData() : any[] {
+    if (!this.parent || !this.parent.settingsComponent) {
+      return this.biomeData;
+    }
+    return this.biomeData.map(stage =>
+      (stage as any).filter((biome: any) => {
+        if(biome.dlc !== undefined) {
+          return !biome.dlc || this.parent.settingsComponent.dlcs[biome.dlc as keyof typeof this.parent.settingsComponent.dlcs];
+        }
+        return true;
+      })
+    );
+  }
 
   ngOnInit() {
     this.dataService.getData().subscribe({
       next: (data) => {
-        this.biomeData = data;
-        console.log(data.length);
+        setTimeout(() => { // Defer the change detection
+          this.biomeData = data;
+          console.log(data.length);
+        }, 0);
       },
       error: (error) => {
         console.error(error);

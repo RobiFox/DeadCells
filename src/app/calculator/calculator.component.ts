@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import {NgOptimizedImage} from "@angular/common";
 import {DropdownModule} from "primeng/dropdown";
 import {SettingsComponent} from "../settings/settings.component";
@@ -17,5 +17,5 @@ import {MapComponent} from "../map/map.component";
   styleUrl: './calculator.component.scss'
 })
 export class CalculatorComponent {
-
+  @ViewChild('settings') settingsComponent!: SettingsComponent;
 }

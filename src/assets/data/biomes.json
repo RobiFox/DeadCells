@@ -3,6 +3,7 @@
     {
       "id": "prisoners",
       "name": "Prisoners' Quarters",
+      "image": "https://deadcells.wiki.gg/images/c/cd/Prisoners%27_Quarters.png",
       "difficulty": [
         {
           "scrollCount": 2,
@@ -17,6 +18,7 @@
     {
       "id": "condemned",
       "name": "Promnade of the Condemned",
+      "image": "https://deadcells.wiki.gg/images/a/a4/Promenade_of_the_Condemned.png",
       "difficulty": [
         {
           "scrollCount": 1,
@@ -53,6 +55,7 @@
     {
       "id": "toxic",
       "name": "Toxic Sewers",
+      "image": "https://deadcells.wiki.gg/images/f/fe/Toxic_Sewers.png",
       "difficulty": [
         {
           "scrollCount": 1,
@@ -89,6 +92,8 @@
     {
       "id": "dilapidated",
       "name": "Dilapidated Arboretum",
+      "image": "https://deadcells.wiki.gg/images/a/a4/Dilapidated_Arboretum.png",
+      "dlc": "theBadSeed",
       "difficulty": [
         {
           "scrollCount": 1,
@@ -125,6 +130,8 @@
     {
       "id": "castle_outskirts",
       "name": "Castle's Outskirts",
+      "image": "https://deadcells.wiki.gg/images/a/a7/Castle%27s_Outskirts.png",
+      "dlc": "castlevania",
       "difficulty": [
         {
           "scrollCount": 1,

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {DropdownModule} from "primeng/dropdown";
 import {FormsModule} from "@angular/forms";
 import {CommonModule, NgOptimizedImage} from "@angular/common";
@@ -22,9 +22,13 @@ export class SettingsComponent {
   selectedBossCell = 0;
 
   cursedChests = true;
-  riseOfTheGiants = true;
-  theBadSeed = false;
-  fatalFalls = false;
-  queenAndTheSea = false;
-  castlevania = false;
+
+  dlcs = {
+    "spoiler": false,
+    "riseOfTheGiants": false,
+    "theBadSeed": false,
+    "fatalFalls": false,
+    "queenAndTheSea": false,
+    "castlevania": false
+  }
 }
