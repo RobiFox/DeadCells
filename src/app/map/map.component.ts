@@ -1,9 +1,9 @@
 import {
-  AfterViewInit,
+  AfterViewInit, ApplicationRef, ChangeDetectorRef,
   Component,
   ComponentRef,
   ElementRef,
-  Inject,
+  Inject, NgZone,
   Renderer2,
   ViewChild,
   ViewContainerRef
@@ -11,7 +11,7 @@ import {
 import {SettingsComponent} from "../settings/settings.component";
 import {CheckboxModule} from "primeng/checkbox";
 import {DropdownModule} from "primeng/dropdown";
-import {NgOptimizedImage} from "@angular/common";
+import {CommonModule, NgOptimizedImage} from "@angular/common";
 import {DataService} from "../data.service";
 import {BiomeComponent} from "../biome/biome.component";
 import {Button} from "primeng/button";
@@ -23,38 +23,42 @@ declare var LeaderLine: any;
   selector: 'app-map',
   standalone: true,
   imports: [
+    CommonModule,
     SettingsComponent,
     CheckboxModule,
     DropdownModule,
     NgOptimizedImage,
     BiomeComponent,
     Button,
-    Ripple
+    Ripple,
   ],
   templateUrl: './map.component.html',
   styleUrl: './map.component.scss'
 })
 export class MapComponent implements AfterViewInit {
-  constructor(private dataService: DataService, private viewContainerRef: ViewContainerRef, private renderer: Renderer2) {
+  constructor(private dataService: DataService, private viewContainerRef: ViewContainerRef, private renderer: Renderer2, private cdr: ChangeDetectorRef) {
   }
 
-  private biomeData: any;
-  @ViewChild("list", {read: ElementRef}) list!: ElementRef;
+  protected biomeData: any;
+  @ViewChild("list") list!: ElementRef;
 
   ngAfterViewInit() {
     this.dataService.getData().subscribe({
       next: (data) => {
         this.biomeData = data;
         console.log(data.length);
-        for(let i = 0; i < data.length; i++) {
+        for (let i = 0; i < data.length; i++) {
           const divElement = this.renderer.createElement('div');
           this.renderer.addClass(divElement, "element");
           this.renderer.appendChild(this.list.nativeElement, divElement);
-          for(let j = 0; j < data[i].length; j++) {
-            const biomeComponent: ComponentRef<BiomeComponent> = this.viewContainerRef.createComponent(BiomeComponent);
-            biomeComponent.instance.biomeModel = data[i][j];
+          for (let j = 0; j < data[i].length; j++) {
+            let biomeComponent: ComponentRef<BiomeComponent> = this.viewContainerRef.createComponent(BiomeComponent);
+            //biomeComponent.instance.biomeModel = data[i][j];
+            biomeComponent.setInput("biomeModel", data[i][j]);
+            this.cdr.detectChanges();
             this.renderer.appendChild(divElement, biomeComponent.location.nativeElement);
           }
+          console.log("added");
         }
       },
       error: (error) => {
