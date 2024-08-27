@@ -5,7 +5,7 @@
   <div style="display: flex; flex-direction: row; gap: 128px; align-items: center; justify-content: center;">
     <ng-container *ngFor="let biomeList of getFilteredBiomeData()">
       <div class="element">
-        <app-biome *ngFor="let biome of biomeList" [biomeModel]="biome"></app-biome>
+        <app-biome *ngFor="let biome of biomeList" [biomeModel]="biome" [id]="biome.id"></app-biome>
       </div>
     </ng-container>
   </div>

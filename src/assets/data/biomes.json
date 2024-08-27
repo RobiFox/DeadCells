@@ -4,6 +4,12 @@
       "id": "prisoners",
       "name": "Prisoners' Quarters",
       "image": "https://deadcells.wiki.gg/images/c/cd/Prisoners%27_Quarters.png",
+      "exits": [
+        {"biome": "condemned", "cells": 0},
+        {"biome": "toxic", "cells": 0},
+        {"biome": "dilapidated", "cells": 0},
+        {"biome": "castle_outskirts", "cells": 0}
+      ],
       "difficulty": [
         {
           "scrollCount": 2,
