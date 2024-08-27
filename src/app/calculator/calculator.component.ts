@@ -3,6 +3,7 @@ import {NgOptimizedImage} from "@angular/common";
 import {DropdownModule} from "primeng/dropdown";
 import {SettingsComponent} from "../settings/settings.component";
 import {MapComponent} from "../map/map.component";
+import {SummaryComponent} from "../summary/summary.component";
 
 @Component({
   selector: 'app-calculator',
@@ -11,7 +12,8 @@ import {MapComponent} from "../map/map.component";
     NgOptimizedImage,
     DropdownModule,
     SettingsComponent,
-    MapComponent
+    MapComponent,
+    SummaryComponent
   ],
   templateUrl: './calculator.component.html',
   styleUrl: './calculator.component.scss'
