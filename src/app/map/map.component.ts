@@ -1,12 +1,9 @@
 import {
-  AfterViewInit, ApplicationRef, ChangeDetectorRef,
   Component,
-  ComponentRef,
   ElementRef,
-  Inject, NgZone, OnChanges, Optional,
-  Renderer2, SimpleChanges, SkipSelf,
+  NgZone, Optional,
+  SkipSelf,
   ViewChild,
-  ViewContainerRef
 } from '@angular/core';
 import {SettingsComponent} from "../settings/settings.component";
 import {CheckboxModule} from "primeng/checkbox";
@@ -16,7 +13,6 @@ import {DataService} from "../data.service";
 import {BiomeComponent} from "../biome/biome.component";
 import {Button} from "primeng/button";
 import {Ripple} from "primeng/ripple";
-import {BiomeModel} from "../biome/biome.model";
 import {CalculatorComponent} from "../calculator/calculator.component";
 
 declare var LeaderLine: any;
@@ -38,12 +34,13 @@ declare var LeaderLine: any;
   styleUrl: './map.component.scss'
 })
 export class MapComponent {
-  constructor(private dataService: DataService, @Optional() @SkipSelf() protected parent: CalculatorComponent, private ngZone: NgZone) {
-  }
-
-  private linesCreated = false;
+  public linesCreated = false;
   private biomeData = [];
   @ViewChild("list") list!: ElementRef;
+  @ViewChild("map") map!: ElementRef;
+
+  constructor(private dataService: DataService, @Optional() @SkipSelf() protected parent: CalculatorComponent, private ngZone: NgZone) {
+  }
 
   getFilteredBiomeData(): any[] {
     if (!this.parent || !this.parent.settingsComponent) {
@@ -63,7 +60,7 @@ export class MapComponent {
   ngOnInit() {
     this.dataService.getData().subscribe({
       next: (data) => {
-        setTimeout(() => { // Defer the change detection
+        setTimeout(() => {
           this.biomeData = data;
           console.log(data.length);
         }, 0);
@@ -80,6 +77,7 @@ export class MapComponent {
 
   ngAfterViewInit() {
     this.createLines();
+    this.map.nativeElement.addEventListener('scroll', () => {});
   }
 
   ngAfterViewChecked() {
@@ -88,7 +86,7 @@ export class MapComponent {
 
   private lines: any[] = [];
   createLines() {
-    if (this.linesCreated || !this.parent || !this.parent.settingsComponent || this.biomeData.length == 0 || typeof document === 'undefined') return;
+    if (!this.parent || !this.parent.settingsComponent || this.biomeData.length == 0 || typeof document === 'undefined') return;
     this.linesCreated = true;
     this.ngZone.runOutsideAngular(() => {
       setTimeout(() => {
@@ -100,6 +98,7 @@ export class MapComponent {
             if (biome.exits) {
               for (let exits of biome.exits as any) {
                 if (document.getElementById(exits.biome) === null) continue;
+                if(this.parent.settingsComponent.selectedBossCell < exits.cells) continue;
                 this.createLine(document.getElementById(biome.id), document.getElementById(exits.biome));
               }
             }

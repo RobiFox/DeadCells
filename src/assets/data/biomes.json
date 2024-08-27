@@ -171,5 +171,222 @@
         }
       ]
     }
+  ],
+  [
+    {
+      "id": "prison_depths",
+      "name": "Prison Depths",
+      "image": "https://deadcells.wiki.gg/images/c/ce/Prison_Depths.png",
+      "difficulty": [
+        {
+          "scrollCount": 0,
+          "dualScrolls": 0,
+          "cursedChestChance": 1,
+          "fragment": 0
+        }
+      ]
+    },
+    {
+      "id": "corrupted_prison",
+      "name": "Prison Depths",
+      "image": "https://deadcells.wiki.gg/images/3/35/Corrupted_Prison.png",
+      "difficulty": [
+        {
+          "scrollCount": 0,
+          "dualScrolls": 0,
+          "cursedChestChance": 1,
+          "fragment": 0
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "id": "ramparts",
+      "name": "Ramparts",
+      "image": "https://deadcells.wiki.gg/images/b/be/Ramparts.png",
+      "difficulty": [
+        {
+          "scrollCount": 3,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 0
+        },
+        {
+          "scrollCount": 3,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 0
+        },
+        {
+          "scrollCount": 4,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 0
+        },
+        {
+          "scrollCount": 4,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 1
+        },
+        {
+          "scrollCount": 4,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 2
+        }
+      ]
+    },
+    {
+      "id": "ancient",
+      "name": "Ancient Sewers",
+      "image": "https://deadcells.wiki.gg/images/3/39/Ancient_Sewers.png",
+      "difficulty": [
+        {
+          "scrollCount": 3,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 0
+        },
+        {
+          "scrollCount": 3,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 0
+        },
+        {
+          "scrollCount": 4,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 0
+        },
+        {
+          "scrollCount": 4,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 3
+        },
+        {
+          "scrollCount": 4,
+          "dualScrolls": 2,
+          "cursedChestChance": 0.1,
+          "fragment": 5
+        }
+      ]
+    },
+    {
+      "id": "ossuary",
+      "name": "Ossuary",
+      "image": "https://deadcells.wiki.gg/images/a/af/Ossuary.png",
+      "difficulty": [
+        {
+          "scrollCount": 2,
+          "dualScrolls": 2,
+          "cursedChestChance": 1.1,
+          "fragment": 0
+        },
+        {
+          "scrollCount": 2,
+          "dualScrolls": 2,
+          "cursedChestChance": 1.1,
+          "fragment": 0
+        },
+        {
+          "scrollCount": 3,
+          "dualScrolls": 2,
+          "cursedChestChance": 1.1,
+          "fragment": 0
+        },
+        {
+          "scrollCount": 3,
+          "dualScrolls": 2,
+          "cursedChestChance": 1.1,
+          "fragment": 2
+        },
+        {
+          "scrollCount": 3,
+          "dualScrolls": 2,
+          "cursedChestChance": 1.1,
+          "fragment": 3
+        }
+      ]
+    },
+    {
+      "id": "banished",
+      "name": "Morass of the Banished",
+      "image": "https://deadcells.wiki.gg/images/4/4b/Morass_of_the_Banished.png",
+      "dlc": "theBadSeed",
+      "difficulty": [
+        {
+          "scrollCount": 2,
+          "dualScrolls": 2,
+          "cursedChestChance": 1.1,
+          "fragment": 0
+        },
+        {
+          "scrollCount": 2,
+          "dualScrolls": 2,
+          "cursedChestChance": 1.1,
+          "fragment": 0
+        },
+        {
+          "scrollCount": 3,
+          "dualScrolls": 2,
+          "cursedChestChance": 1.1,
+          "fragment": 0
+        },
+        {
+          "scrollCount": 3,
+          "dualScrolls": 2,
+          "cursedChestChance": 1.1,
+          "fragment": 2
+        },
+        {
+          "scrollCount": 3,
+          "dualScrolls": 2,
+          "cursedChestChance": 1.1,
+          "fragment": 4
+        }
+      ]
+    },
+    {
+      "id": "dracula_castle_fake",
+      "name": "Dracula's Castle (Fake)",
+      "image": "https://deadcells.wiki.gg/images/0/0a/Dracula%27s_Castle.png",
+      "dlc": "castlevania",
+      "difficulty": [
+        {
+          "scrollCount": 3,
+          "dualScrolls": 2,
+          "cursedChestChance": 1.1,
+          "fragment": 0
+        },
+        {
+          "scrollCount": 3,
+          "dualScrolls": 2,
+          "cursedChestChance": 1.1,
+          "fragment": 0
+        },
+        {
+          "scrollCount": 4,
+          "dualScrolls": 2,
+          "cursedChestChance": 1.1,
+          "fragment": 0
+        },
+        {
+          "scrollCount": 4,
+          "dualScrolls": 2,
+          "cursedChestChance": 1.1,
+          "fragment": 3
+        },
+        {
+          "scrollCount": 3,
+          "dualScrolls": 2,
+          "cursedChestChance": 1.1,
+          "fragment": 4
+        }
+      ]
+    }
   ]
 ]

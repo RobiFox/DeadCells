@@ -20,4 +20,5 @@ import {SummaryComponent} from "../summary/summary.component";
 })
 export class CalculatorComponent {
   @ViewChild('settings') settingsComponent!: SettingsComponent;
+  @ViewChild('map') mapsComponent!: MapComponent;
 }
