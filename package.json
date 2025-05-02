@@ -19,7 +19,7 @@
     "@angular/router": "^19.2.0",
     "@primeng/themes": "^19.1.2",
     "@tailwindcss/postcss": "^4.1.5",
-    "angular-cli-ghpages": "^2.0.3",
+    "angular-cli-ghpages": "github:Nick-Trag/angular-cli-ghpages-dist",
     "linkerline": "^1.6.1",
     "postcss": "^8.5.3",
     "primeng": "^19.1.2",
